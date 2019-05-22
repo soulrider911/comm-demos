@@ -1,0 +1,23 @@
+{
+  "pageTitle": "Audience Expression",
+  "pills": [
+    {
+      "name": "Tucker Home goods"
+    },
+    {
+      "name": "Lomps Plus"
+    },
+    {
+      "name": "Lowe's"
+    },
+    {
+      "name": "World Market"
+    },
+    {
+      "name" : "Home Goods"
+    },
+    {
+      "name": "Home Depot"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page strucutre List demo</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <br>
+  <h1 class="slds-text-heading--large slds-text-align_center">Page Structure using Tree list</h1>
+  <section class="slds-popover slds-panel_docked builder-tool_panel slds-m-top_medium" role="dialog" aria-label="Dialog Title" aria-describedby="dialog-body-id-2" style="width:280px; height: calc(100% - 4rem);
+  ">
+    <div class="slds-panel__header">
+      <h2 class="slds-panel__header-title slds-text-heading_small">Page Strucuture</h2>
+      <button class="slds-button slds-button_icon slds-panel__close slds-button_icon-small" title="Close Filter Panel">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+        </svg>
+        <span class="slds-assistive-text">Close Tool Panel</span>
+      </button>
+    </div>
+    <div class="slds-grid slds-grid_vertical slds-m-around_x-small">
+      <div class="slds-grid">
+        <strong class="slds-text-body_regular slds-m-right_xx-small">Hidden Components</strong>
+        <span class="slds-badge hidden_count">1</span>
+      </div>
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="combobox-id-173">Show:</label>
+        <div class="slds-form-element__control slds-m-bottom_small">
+          <div class="slds-combobox_container">
+            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+              <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                <input type="text" class="slds-input slds-combobox__input" id="combobox-id-173" aria-controls="listbox-id-1" autoComplete="off" role="textbox" value="All Components" readonly="" />
+                <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
+                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                </span>
+              </div>
+              <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid" role="listbox">
+                <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slds-popover__body slds-p-around_x-small slds-p-top_none slds-grid slds-grid_vertical slds-scrollable_y" id="dialog-body-id-2" style="height: calc(100% - 142px);">
+    <!-- tree -->
+    <div class="slds-tree_container" role="application">
+      <ul class="slds-tree" role="tree" aria-labelledby="treeheading">
+        <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+          <div class="slds-tree__item slds-p-left_none">
+            <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="0" title="Expand Tree Branch">
+              <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+              </svg>
+              <span class="slds-assistive-text">Expand Tree Branch</span>
+            </button>
+            <span class="slds-size_1-of-1">
+              <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Tree Branch</span>
+            </span>
+          </div>
+          <ul role="group">
+            {% for component in components %}
+            <li role="treeitem" aria-level="2" aria-selected="false">
+              <div class="slds-p-left_none slds-grid slds-p-around_xx-small">
+                <button class="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small slds-m-top_none slds-align-middle" aria-haspopup="true" tabindex="0" title="Rearrange {{ component.name }}">
+                  <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows" />
+                  </svg>
+                  <span class="slds-assistive-text">{{ component.name }} Settings</span>
+                </button>
+                <span class="slds-icon_container {{ component.color }} slds-m-horizontal_xx-small" title="Description of icon when needed">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#{{ component.icon }}"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Description of icon when needed</span>
+                </span>
+                <a href="#" class="slds-tree__item-label slds-truncate slds-align-middle" title="Tree Item">{{ component.name }}</a>
+                <div class="slds-col_bump-left">
+                  <button class="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small slds-m-top_none" aria-haspopup="true" tabindex="0" title="Show {{ page.name }}">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#preview" />
+                    </svg>
+                    <span class="slds-assistive-text">Show {{ component.name }}</span>
+                  </button>
+                  <button class="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small slds-m-top_none" aria-haspopup="true" tabindex="0" title="More actions for {{ page.name }}">
+                    <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete" />
+                    </svg>
+                    <span class="slds-assistive-text">{{ component.name }} Settings</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- //Tree -->
+    </div> <!-- //popover body -->
+  </section>
+
+  <script src="/scripts/app.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+  <script>
+    $(function(){
+
+    });
+  </script>
+</body>
+</html>

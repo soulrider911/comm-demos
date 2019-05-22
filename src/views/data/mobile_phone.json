@@ -1,0 +1,64 @@
+{
+  "pageTitle": "CB Pages menu",
+  "pages": [
+    {
+      "name": "Home"
+    },
+    {
+      "name": "About Us"
+    },
+    {
+      "name": "Account Managementad fkls adfj; asdklfjasldkfj asd;lkj "
+    },
+    {
+      "name": "Article Detail"
+    },
+    {
+      "name" : "Contact Support"
+    },
+    {
+      "name": "Create Record"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Components",
+      "icon": "connected_apps"
+    },
+    {
+      "name": "Appearance",
+      "icon": "brush"
+    },
+    {
+      "name": "Page Structure",
+      "icon": "richtextbulletedlist"
+    },
+    {
+      "name": "Settings",
+      "icon": "settings"
+    }
+  ],
+  "components": [
+    {
+      "name": "CMS Collection",
+      "icon": "news",
+      "color":"slds-icon-standard-partner-fund-request"
+    },
+    {
+      "name": "CMS Single Item",
+      "icon": "news",
+      "color":"slds-icon-standard-partner-fund-request"
+    },
+    {
+      "name": "Headline",
+      "icon": "contract",
+      "color":"slds-icon-standard-contract"
+    },
+    {
+      "name": "Topics",
+      "icon": "topic",
+      "color":"slds-icon-standard-topic"
+    },
+
+  ]
+}

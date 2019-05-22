@@ -1,0 +1,45 @@
+<div class="slds-dropdown slds-dropdown_left pages_menu">
+  <div class="slds-grid slds-grid_vertical slds-m-horizontal_x-small">
+    <button class="slds-button slds-button_brand slds-m-bottom_x-small " tabindex="1">New Page</button>
+    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+      <input class="slds-input slds-combobox__input slds-combobox__input-value" id="combobox-id-01" aria-autocomplete="list" aria-controls="listbox-id-01" autocomplete="off" role="textbox" type="text" placeholder="Search..." tabindex="1">
+        <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"><svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true"><use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use></svg></span>
+    </div>
+  </div>
+  <table class="slds-table slds-table_header-hidden slds-table_edit slds-tree slds-table_tree slds-no-row-hover slds-max-medium-table_stacked-horizontal slds-table_fixed-layout" role="treegrid">
+  <!-- <thead class="slds-assistive-text">
+    <tr class="slds-line-height_reset">
+      <th aria-label="Page Name" scope="col">
+        <div class="slds-th__action">
+          <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+            <span class="slds-truncate" title="Account Name">Page Name</span>
+          </div>
+        </div>
+      </th>
+      <th aria-label="Page Name" scope="col">
+        <div class="slds-truncate slds-assistive-text" title="Actions">Page Details</div>
+      </th>
+    </tr>
+  </thead> -->
+  <tbody>
+    {% for page in pages %}
+    <tr aria-level="1" aria-posinset="1" aria-selected="false" aria-setsize="4">
+      <th data-label="Page Name" scope="row">
+        <div class="slds-grid slds-grid_vertical-align-center" title="{{ page.name }}">
+          <a class="slds-truncate" href="javascript:void(0);" tabindex="0">{{ page.name }}</a>
+        </div>
+      </th>
+      <td role="gridcell" style="width:30px;">
+        <button class="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="0" title="More actions for {{ page.name }}">
+          <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#threedots" />
+          </svg>
+          <span class="slds-assistive-text">{{ page.name }} Settings</span>
+        </button>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  <!-- //table -->
+</div>

@@ -1,0 +1,88 @@
+<nav class="builder-tools slds-m-left_medium slds-m-top_medium">
+  <ul>
+  {% for tool in tools %}
+    <li class="tool slds-form-element slds-m-bottom_x-small">
+      <button class="slds-button slds-button_icon slds-icon_container" tabindex="0">
+        <svg class="slds-icon slds-icon_large" aria-hidden="true">
+        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#{{ tool.icon }}"></use></svg>
+        <span class="slds-assistive-text">{{ tool.name }}</span>
+      </button>
+      <div class="slds-popover slds-popover_tooltip slds-nubbin_left" role="tooltip" id="help" style="position: absolute; top: 8px; left: 65px;white-space:nowrap">
+        <div class="slds-popover__body">{{ tool.name }}</div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+<section class="slds-popover slds-panel_docked builder-tool_panel slds-m-top_medium" role="dialog" aria-label="Dialog Title" aria-describedby="dialog-body-id-2" style="width:280px;">
+  <div class="slds-panel__header">
+    <h2 class="slds-panel__header-title slds-text-heading_small">Components</h2>
+    <button class="slds-button slds-button_icon slds-panel__close slds-button_icon-small" title="Close Filter Panel">
+      <svg class="slds-button__icon" aria-hidden="true">
+        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+      </svg>
+      <span class="slds-assistive-text">Close Tool Panel</span>
+    </button>
+  </div>
+  <div class="slds-grid slds-grid_vertical slds-m-around_x-small">
+    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+      <input class="slds-input slds-combobox__input slds-combobox__input-value" id="combobox-id-01" aria-autocomplete="list" aria-controls="listbox-id-01" autocomplete="off" role="textbox" type="text" placeholder="Search Components..." tabindex="0">
+        <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"><svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true"><use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use></svg></span>
+    </div>
+  </div>
+  <div class="slds-popover__body slds-p-around_x-small slds-p-top_none slds-grid slds-grid_vertical slds-scrollable_y" id="dialog-body-id-2">
+    <div class="slds-col slds-grow">
+      <table class="slds-table slds-table_header-hidden slds-table_edit slds-tree slds-table_tree slds-no-row-hover slds-max-medium-table_stacked-horizontal slds-table_fixed-layout" role="treegrid">
+        <tbody>
+          <tr aria-level="1" aria-posinset="1" aria-selected="false" aria-setsize="4">
+            <th role="gridcell" style="width:24px; padding: .25rem .25rem .25rem 0;">
+              <button class="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="0" title="More actions for {{ page.name }}">
+                <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                </svg>
+                <span class="slds-assistive-text">{{ component.name }} Settings</span>
+              </button>
+            </th>
+            <td data-label="Page Name" scope="row" class="slds-p-left_none">
+              <div class="slds-grid slds-grid_vertical-align-center" title="{{ page.name }}">
+                <spanclass="slds-truncate" tabindex="0">General Components (7)</span>
+              </div>
+            </td>
+            <td role="gridcell" style="width:30px;"></td>
+          </tr>
+          {% for component in components %}
+          <tr aria-level="1" aria-posinset="1" aria-selected="false" aria-setsize="4">
+            <td role="gridcell" style="padding: .25rem .25rem .25rem 0;">
+              <button class="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="0" title="More actions for {{ page.name }}">
+                <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows" />
+                </svg>
+                <span class="slds-assistive-text">{{ component.name }} Settings</span>
+              </button>
+            </td>
+            <td data-label="Page Name" scope="row" class="slds-p-left_none">
+              <div class="slds-grid slds-grid_vertical-align-center" title="{{ page.name }}">
+                <span class="slds-icon_container {{ component.color }} slds-m-right_x-small" title="Description of icon when needed">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#{{ component.icon }}"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Description of icon when needed</span>
+                </span>
+                <a class="slds-truncate" href="javascript:void(0);" tabindex="0">{{ component.name }}</a>
+              </div>
+            </td>
+            <td role="gridcell">
+              <button class="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="0" title="More actions for {{ page.name }}">
+                <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#threedots" />
+                </svg>
+                <span class="slds-assistive-text">{{ component.name }} Settings</span>
+              </button>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

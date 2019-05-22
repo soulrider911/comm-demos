@@ -1,0 +1,25 @@
+{
+  "components": [
+    {
+      "name": "CMS Collection",
+      "icon": "news",
+      "color":"slds-icon-standard-partner-fund-request"
+    },
+    {
+      "name": "CMS Single Item",
+      "icon": "news",
+      "color":"slds-icon-standard-partner-fund-request"
+    },
+    {
+      "name": "Headline",
+      "icon": "contract",
+      "color":"slds-icon-standard-contract"
+    },
+    {
+      "name": "Topics",
+      "icon": "topic",
+      "color":"slds-icon-standard-topic"
+    },
+
+  ]
+}

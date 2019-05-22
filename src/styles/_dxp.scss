@@ -1,0 +1,137 @@
+/* -------------------
+// Flow Header
+------------------- */
+.header_utilities{
+ border-bottom: 1px solid $button-color-border-primary;
+ .slds-form-element{
+   display: inline-block;
+ }
+}
+
+.slds-tree__item.slds-is-hovered, .slds-tree__item:hover{
+  background:transparent;
+}
+.pages_menu{
+  width: 250px;
+}
+
+// slds-expression
+.slds-expression__options {
+    width: 15rem;
+}
+.slds-expression__buttons {
+    margin-top: .75rem;
+}
+
+.slds-expression__legend {
+    float: left;
+    width: 3rem;
+    padding-top: 1.59375rem;
+    font-weight: 700;
+}
+.slds-expression__row {
+  margin-top: .75rem;
+  .slds-pill_container{
+    flex-wrap: wrap;
+    .slds-pill{
+      margin: .125rem;
+    }
+  }
+}
+
+// --------------------
+//Builder Tools
+// --------------------
+.builder-tools{
+  position: fixed;
+  left: 0px;
+  z-index: 7000;
+
+  .slds-popover{
+    transition: opacity .12s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .slds-icon_container{
+    background-color: $color-background-alt-inverse;
+    .slds-icon{
+      padding: 10px;
+    }
+    &:hover, &:focus{
+      ~.slds-popover{
+        opacity: 1;
+        visibility: visible;
+      }
+      background-color: $color-background-brand-primary-active;
+    }
+    &.active{
+      background-color: red;
+    }
+    &.selected{
+      background-color: $color-background-brand-primary-active;
+    }
+  }
+}
+.slds-panel__header{
+  padding-left: .75rem;
+  .slds-panel__header-title{
+    text-align: left;
+  }
+}
+
+.builder-tool_panel{
+  position: fixed;
+  left: 80px;
+  height: calc(100% - 10rem);
+  .slds-popover__body{
+    height: calc(100% - 100px);
+  }
+}
+//Mobile Phone background
+#sitePreviewWorkarea{
+  position: fixed;
+  width: 375px;
+  left: 0; right: 0; top: 104px; bottom: 0;
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    width: 375px;
+    position: fixed;
+  }
+  //for mobile phone chrome
+  &:before{
+    width: 375px;
+    height: 104px;
+    top:0;
+    background-image: url("../assets/phone_top.png");
+    background-position: top center;
+    background-size: 375px;
+    background-repeat: no-repeat;
+  }
+
+  &:after{
+    height: 104px;
+    bottom: 0px;
+    background-image: url("../assets/phone_bottom.png");
+    background-position: bottom center;
+    background-size: 375px;
+    background-repeat: no-repeat;
+  }
+  > .cViewPanel{
+    padding: 0 30px;
+    background-image: url("../assets/phone_body_repeat.png");
+    background-position: center center;
+    background-size: 375px;
+    position: absolute;
+    z-index: 10;
+    overflow-y: auto;
+    height: calc(100% - 104px);
+  }
+}
+
+//Mobile page Structure
+.slds-badge.hidden_count{
+  color: white;
+  background-color: $color-background-brand-primary-active;
+}

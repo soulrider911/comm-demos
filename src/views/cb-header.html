@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Builder Header Bar</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="slds-builder-header_container">
+    <header class="slds-builder-header">
+      <div class="slds-builder-header__item">
+        <div class="slds-builder-header__item-label slds-media slds-media_center">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-utility-builder slds-current-color">
+              <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#builder" />
+              </svg>
+            </span>
+          </div>
+          <div class="slds-media__body">Site Builder</div>
+        </div>
+      </div>
+      <nav class="slds-builder-header__item slds-builder-header__nav">
+        <ul class="slds-builder-header__nav-list">
+          <li class="slds-builder-header__nav-item">
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+              <button class="slds-button slds-builder-header__item-action slds-media slds-media_center" aria-haspopup="true" title="Click to open menu" tabindex="1">
+                <span class="slds-media__figure">
+                  <span class="slds-icon_container slds-icon-utility-page slds-current-color">
+                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings" />
+                    </svg>
+                  </span>
+                </span>
+                <span class="slds-media__body">
+                  <span class="slds-truncate" title="Dropdown">Home Page</span>
+                  <span class="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small">
+                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                    </svg>
+                  </span>
+                </span>
+              </button>
+              {% include "_pagesMenu.html" %}
+          </li>
+          <li class="slds-builder-header__nav-item">
+            <button class="slds-button slds-builder-header__item-action slds-media slds-media_center" aria-haspopup="true" title="Click to open menu">
+              <span class="slds-media__body">
+                <span class="slds-truncate" title="Dropdown">Home Variation</span>
+                <span class="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small">
+                  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </li>
+          <li class="slds-builder-header__nav-item">
+            <button class="slds-button slds-builder-header__item-action slds-media slds-media_center" aria-haspopup="true" title="Click to open menu">
+              <span class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-utility-page slds-current-color">
+                  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#refresh" />
+                  </svg>
+                </span>
+                <span class="slds-assistive-text">Refresh Page</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="slds-builder-header__item slds-builder-header__utilities">
+        <div class="slds-builder-header__utilities-item">
+          <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-utility-back slds-current-color">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#back" />
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">Back</div>
+          </a>
+        </div>
+        <!-- help menu -->
+        <div class="slds-builder-header__utilities-item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover">
+          <button class="slds-builder-header__item-action slds-media slds-media_center" style="background:none; border:none;">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-utility-help slds-current-color">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#help" />
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">Help</div>
+          </button>
+          <div class="slds-dropdown slds-dropdown_right" style="margin-top:2px; right: 10px;">
+            <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                  <span class="slds-truncate" title="Menu Item One">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#breadcrumbs"></use>
+                    </svg>
+                    Take a Tour
+                  </span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="#" role="menuitem" tabindex="-1">
+                  <span class="slds-truncate" title="Menu Item One">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"></use>
+                    </svg>
+                    What's New
+                  </span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="https://help.salesforce.com/articleView?id=community_designer_overview.htm&type=5" role="menuitem" tabindex="-1">
+                  <span class="slds-truncate" title="Menu Item One">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#help"></use>
+                    </svg>
+                    Site Builder help
+                  </span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="javascript:void(0);" role="menuitem" tabindex="-1" aria-hasmodal="keyboard-shortcuts">
+                  <span class="slds-truncate" title="Menu Item One">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#keyboard_dismiss"></use>
+                    </svg>
+                    Keyboard Shortcuts
+                  </span>
+                </a>
+              </li>
+              <li class="slds-has-divider_top-space" role="separator"></li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="javascript:void(0);" role="menuitem" tabindex="-1" aria-hasmodal="keyboard-shortcuts">
+                  <span class="slds-truncate" title="Menu Item One">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#announcement"></use>
+                    </svg>
+                    Give Feedback
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- //Help Menu -->
+    </header>
+
+    <!-- Builder toolbar -->
+    <div class="slds-builder-toolbar" role="toolbar">
+      <div class="slds-builder-toolbar__item-group" aria-label="Canvas Actions">
+        <div class="slds-button-group">
+          <button class="slds-button slds-button_icon slds-button_icon-border" title="Undo" tabindex="0">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#undo"></use>
+            </svg>
+            <span class="slds-assistive-text">Undo</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border" title="Redo" tabindex="0">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#redo"></use>
+            </svg>
+            <span class="slds-assistive-text">Redo</span>
+          </button>
+        </div>
+      </div>
+      <div class="slds-builder-toolbar__item-group" aria-label="Edit actions">
+        <div class="slds-button-group">
+<button class="slds-button slds-button_icon slds-button_icon-border" title="Cut" tabindex="0">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cut"></use>
+            </svg>
+            <span class="slds-assistive-text">Cut</span>
+          </button>
+<button class="slds-button slds-button_icon slds-button_icon-border" title="Copy" tabindex="0">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#copy"></use>
+            </svg>
+            <span class="slds-assistive-text">Copy</span>
+          </button>
+<button class="slds-button slds-button_icon slds-button_icon-border" title="Paste" tabindex="0">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#paste"></use>
+            </svg>
+            <span class="slds-assistive-text">Paste</span>
+          </button>
+        </div>
+      </div>
+      <div class="slds-builder-toolbar__actions" aria-label="Document actions">
+        <span class="slds-badge slds-badge_inverse slds-align-middle slds-m-right_small">
+          <span>Using Master Site</span>
+          <button class="slds-button slds-button_icon slds-align-middle slds-button_icon-inverse" aria-hastooltip="true">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info" />
+            </svg>
+            <span class="slds-assistive-text">Provide description of action</span>
+          </button>
+        </span>
+        <div class="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-hidden" role="tooltip" id="help" style="position: absolute; top: 101px; right:189px;">
+          <div class="slds-popover__body">This site is using a master template, some areas may be constained.</div>
+        </div>
+        <button class="slds-button slds-button_neutral">Preview</button>
+        <button class="slds-button slds-button_brand">Publish</button>
+      </div>
+    </div>
+    <!-- //Builder toolbar -->
+    {% include "_tools.html" %}
+    <!-- Keyboard shortcuts modal -->
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small" id="keyboard-shortcuts">
+        <div class="slds-modal__container">
+          <header class="slds-modal__header">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+              <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+              </svg>
+              <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Keyboard Shortcuts</h2>
+          </header>
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <p>If your using an Apple Mac replace the CTRL key with ⌘ key. </p>
+            <div>
+              <div>
+              <div class="slds-section slds-is-open">
+                  <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Section Title">General</span>
+                  </h3>
+                  <div aria-hidden="false" class="slds-section__content">
+                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Keyboard help</dt>
+                      <dd class="slds-item_detail slds-truncate" title="Description for first label">?(Shift+/)</dd>
+                    </dl>
+                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Switch panel focus</dt>
+                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+F6</dd>
+                    </dl>
+                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Undo</dt>
+                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+Z</dd>
+                    </dl>
+                    <dl class="slds-list_horizontal slds-wrap slds-p-left_small">
+                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Redo</dt>
+                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+SHIFT+Z</dd>
+                    </dl>
+                </div>
+              </div>
+              <div class="slds-section slds-is-open">
+                  <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Saving</span>
+                  </h3>
+                  <div aria-hidden="false" class="slds-section__content">
+                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Save</dt>
+                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+S</dd>
+                    </dl>
+                    <dl class="slds-list_horizontal slds-wrap slds-m-bottom_small slds-p-bottom_small slds-p-left_small slds-border_bottom">
+                      <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Save As</dt>
+                      <dd class="slds-item_detail slds-truncate" title="Description for first label">CTRL+SHIFT+S</dd>
+                    </dl>
+                </div>
+              </div>
+              <!-- //section -->
+              </div>
+            </div>
+          </div>
+          <footer class="slds-modal__footer">
+            <div class="slds-truncate slds-float_right" data-aura-rendered-by="4:1021;a"><a href="">Learn More</a></div>
+            <div class="slds-truncate slds-float_left" data-aura-rendered-by="4:1021;a">⇧ Shift |⌘ Command</div>
+          </footer>
+        </div>
+      </section>
+      <div class="slds-backdrop"></div>
+    <!-- //Keyboard shortcuts modal -->
+
+  <script src="/scripts/app.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+  <script>
+    $(function(){
+      var tooltip = $("[aria-hastooltip='true']");
+      var popover = $("[aria-haspopover='true']");
+      tooltip.hover(function(){
+        console.log("hover")
+        $(this).parent().next().removeClass("slds-hidden");
+      },function(){
+        $(this).parent().next().addClass("slds-hidden");
+      });
+      popover.click(function(){
+        $(this).next().removeClass("slds-hidden");
+      });
+
+      $("[aria-hastooltip='true'], [aria-haspopover='true']").focus(function(){
+        $(this).parent().next().removeClass("slds-hidden");
+      })
+      $("[aria-hastooltip='true'], [aria-haspopover='true']").blur(function(){
+        $(this).parent().next().addClass("slds-hidden");
+      });
+
+      //Modal trigger
+      $("[aria-hasmodal]").on("click" , function(){
+        var hash = $(this).attr("aria-hasmodal");
+        console.log($("."+hash));
+        $("#"+hash).addClass("slds-fade-in-open").next().addClass("slds-fade-in-open");
+      });
+
+      $(".slds-modal__close").on("click" , function(){
+        $("#keyboard-shortcuts").removeClass("slds-fade-in-open").next().removeClass("slds-fade-in-open");
+      });
+    });
+  </script>
+</body>
+</html>
